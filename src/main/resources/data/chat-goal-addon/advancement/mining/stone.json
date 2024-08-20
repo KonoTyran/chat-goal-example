@@ -1,0 +1,112 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:golden_pickaxe",
+      "count": 1
+    },
+    "title": "\"Mine Stone\"",
+    "description": "Mine Cobblestone, Blackstone, and Deepslate",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "chat-goal-addon:mining/root",
+  "criteria": {
+    "mine_stone": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": "#minecraft:pickaxes",
+                  "components": {
+                    "minecraft:enchantments": {
+                      "minecraft:silk_touch": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:stone",
+            "properties": {}
+          }
+        ],
+        "location": []
+      }
+    },
+    "mine_blackstone": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": "#minecraft:pickaxes",
+                  "components": {
+                    "minecraft:enchantments": {
+                      "minecraft:silk_touch": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:blackstone",
+            "properties": {}
+          }
+        ],
+        "location": []
+      }
+    },
+    "mine_deepslate": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": "#minecraft:pickaxes",
+                  "components": {
+                    "minecraft:enchantments": {
+                      "minecraft:silk_touch": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:deepslate",
+            "properties": {}
+          }
+        ],
+        "location": []
+      }
+    }
+  },
+  "requirements": [
+    [
+      "mine_stone",
+      "mine_blackstone",
+      "mine_deepslate"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

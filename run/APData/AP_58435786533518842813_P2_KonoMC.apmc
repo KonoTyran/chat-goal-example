@@ -1,0 +1,75 @@
+{
+  "world_seed": 3730686980,
+  "seed_name": "58435786533518842813",
+  "player_name": "Example Player",
+  "player_id": 1,
+  "client_version": 10,
+  "structures": {
+    "Overworld Structure 1": "Nether Fortress",
+    "Overworld Structure 2": "Pillager Outpost",
+    "Nether Structure 1": "Bastion Remnant",
+    "Nether Structure 2": "Village",
+    "The End Structure": "End City"
+  },
+  "MC35": false,
+  "death_link": false,
+  "starting_items": "[{\"item\": \"minecraft:stick[minecraft:custom_name=\\\"{'text':'pointy stick'}\\\"]\"}, {\"item\": \"minecraft:arrow[minecraft:rarity=epic]\", \"amount\": 64}]",
+  "race": false,
+  "items": [
+    {
+      "id": 1,
+      "rewards": [
+        {
+          "type": "archipelago-randomizer:item",
+          "item": "minecraft:iron_sword"
+        }
+      ]
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "type": "archipelago-randomizer:advancement",
+      "advancement": "chat-goal-addon:mining/stone"
+    }
+  ],
+  "goals": [
+    {
+      "type": "archipelago-randomizer:advancement",
+      "id": "ap-example-mod:advancement",
+      "required_advancements": 1
+    },
+    {
+      "type": "chat-goal-addon:chat",
+      "id": "ap-example-mod:chat1",
+      "required_message": "apple",
+      "requirements": [
+        "ap-example-mod:advancement"
+      ]
+    },
+    {
+      "type": "chat-goal-addon:chat",
+      "id": "ap-example-mod:chat2",
+      "required_message": "jump",
+      "requirements": [
+        "ap-example-mod:chat1"
+      ]
+    },
+    {
+      "type": "chat-goal-addon:chat",
+      "id": "ap-example-mod:chat3",
+      "required_message": "tree",
+      "requirements": [
+        "ap-example-mod:chat2"
+      ]
+    },
+    {
+      "type": "chat-goal-addon:chat",
+      "id": "ap-example-mod:chat4",
+      "required_message": "sword",
+      "requirements": [
+        "ap-example-mod:chat3"
+      ]
+    }
+  ]
+}
